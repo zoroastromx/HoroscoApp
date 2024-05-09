@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.inegi.org.horoscopoapp.R
-import com.inegi.org.horoscopoapp.databinding.FragmentHoroscopoBinding
 import com.inegi.org.horoscopoapp.databinding.FragmentLuckBinding
 
 class LuckFragment : Fragment() {
