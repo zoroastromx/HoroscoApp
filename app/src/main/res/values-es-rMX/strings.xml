@@ -4,4 +4,16 @@
     <string name="home">Horóscopo</string>
     <string name="palmistry">Mano</string>
     <string name="luck">Suerte</string>
+    <string name="aries">Aries</string>
+    <string name="taurus">Tauro</string>
+    <string name="gemini">Geminis</string>
+    <string name="cancer">Cáncer</string>
+    <string name="leo">Leo</string>
+    <string name="virgo">Virgo</string>
+    <string name="libra">Libra</string>
+    <string name="scorpio">Escorpión</string>
+    <string name="sagittarius">Sagitario</string>
+    <string name="capricorn">Capricornio</string>
+    <string name="aquarius">Acuario</string>
+    <string name="pisces">Piscis</string>
 </resources>
