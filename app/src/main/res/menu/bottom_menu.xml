@@ -3,7 +3,7 @@
     <item>
         android:id="@+id/horoscopoFragment"
         android:title="Horóscopo"
-        //android:icon="@drawable/ic_horoscopo"
+        android:icon="@drawable/ic_horoscope"
     </item>
 
 </menu>
