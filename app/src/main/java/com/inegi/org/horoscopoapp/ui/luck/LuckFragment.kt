@@ -6,8 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.inegi.org.horoscopoapp.databinding.FragmentLuckBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LuckFragment : Fragment() {
+
+    // para conectar con la clase
+
 
 private var _binding: FragmentLuckBinding? = null
 private val binding get() = _binding!!

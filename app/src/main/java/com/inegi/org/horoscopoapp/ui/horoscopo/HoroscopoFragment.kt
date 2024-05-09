@@ -5,10 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.inegi.org.horoscopoapp.databinding.FragmentHoroscopoBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class HoroscopoFragment : Fragment() {
+
+    private val horoscopoViewModel by viewModels<HoroscopoViewModel>()
 
     private var _binding: FragmentHoroscopoBinding? = null
     private val binding get() = _binding!!
