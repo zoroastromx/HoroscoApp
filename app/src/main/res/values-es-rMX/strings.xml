@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HoroscopoApp</string>
+    <string name="home">Horóscopo</string>
+    <string name="palmistry">Mano</string>
+    <string name="settings">Suerte</string>
+</resources>
