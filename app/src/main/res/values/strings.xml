@@ -4,6 +4,6 @@
     <!-- BottomBar -->
     <string name="home">Horoscope</string>
     <string name="palmistry">Palmistry</string>
-    <string name="settings">Luck</string>
+    <string name="luck">Luck</string>
 
 </resources>
