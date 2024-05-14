@@ -15,7 +15,7 @@ class HoroscopoAdapter(private var horoscopoList: List<HoroscopoInfo> = emptyLis
     override fun getItemCount() = horoscopoList.size
 
     override fun onBindViewHolder(holder: HoroscopeViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.render(horoscopoList[position])
     }
 
 
