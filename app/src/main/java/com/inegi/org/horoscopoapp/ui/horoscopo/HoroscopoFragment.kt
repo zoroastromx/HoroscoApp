@@ -10,7 +10,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.inegi.org.horoscopoapp.databinding.FragmentHoroscopoBinding
+import com.inegi.org.horoscopoapp.ui.horoscopo.adapter.HoroscopoAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -19,6 +21,8 @@ import kotlinx.coroutines.launch
 class HoroscopoFragment : Fragment() {
 
     private val horoscopoViewModel by viewModels<HoroscopoViewModel>()
+
+    private lateinit var horoscopoadapter: HoroscopoAdapter
 
     private var _binding: FragmentHoroscopoBinding? = null
     private val binding get() = _binding!!
@@ -29,7 +33,18 @@ class HoroscopoFragment : Fragment() {
     }
 
     private fun initUI() {
+        initList()
         initUIState()
+    }
+
+    private fun initList() {
+        horoscopoadapter = HoroscopoAdapter()
+        binding.rvHoroscopo.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = horoscopoadapter
+        }
+        //binding.rvHoroscopo.layoutManager = LinearLayoutManager(context)
+        //binding.rvHoroscopo.adapter = horoscopoadapter
     }
 
     private fun initUIState() {
@@ -37,7 +52,8 @@ class HoroscopoFragment : Fragment() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED){
                 horoscopoViewModel.horoscopo.collect{
-                    Log.i("Aries", it.toString())
+                    // cambios en horoscopos
+                    horoscopoadapter.updateList(it)
                 }
             }
 

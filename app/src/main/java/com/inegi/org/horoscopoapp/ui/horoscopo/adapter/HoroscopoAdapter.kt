@@ -8,6 +8,10 @@ import com.inegi.org.horoscopoapp.domain.model.HoroscopoInfo
 
 class HoroscopoAdapter(private var horoscopoList: List<HoroscopoInfo> = emptyList()):
     RecyclerView.Adapter<HoroscopeViewHolder>() {
+        fun updateList(list: List<HoroscopoInfo>) {
+            horoscopoList = list
+            notifyDataSetChanged()
+        }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HoroscopeViewHolder {
         return HoroscopeViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_horoscopo, parent, false))
     }
